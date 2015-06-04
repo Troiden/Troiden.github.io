@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Partial bus select:</h2>
+<p>
+logic [31: 0] a_vect;<br>
+logic [0 :31] b_vect;<br>
+<br>
+logic [63: 0] dword;<br>
+integer sel;<br>
+<br>
+a_vect[ 0 +: 8] // == a_vect[ 7 : 0]<br>
+a_vect[15 -: 8] // == a_vect[15 : 8]<br>
+b_vect[ 0 +: 8] // == b_vect[0 : 7]<br>
+b_vect[15 -: 8] // == b_vect[8 :15]<br>
+<br>
+dword[8*sel +: 8] // variable part-select with fixed width<br>
+</p>
+</body>
+</html>
