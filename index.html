@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<hr WIDTH="80%" SIZE="2" NOSHADE>
-<p>First test page.</p>
-</body>
+<frameset rows="80,*">
+<frame src="frames/frame_top.html" name="Top">
+<frameset rows="*" cols="80,*">
+ <frame src="frames/frame_left.html" name="Left">
+ <frame src="frames/frame_main.html" name="Main">
+</frameset>
+</frameset>
 </html>
