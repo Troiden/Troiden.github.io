@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd>
+<html>
+ <head>
+   <title>!DOCTYPE</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ </head>
+<body>
+<h2>Bitwise operations:</h2>
+<p>
+var<br>
+  I : integer;<br>
+  N : integer;                       // Номер бита в диапазоне от 0..SizeOf(TYPE)*8 - 1<br>
+begin<br>
+  I := I or (1 shl N);               // установка бита<br>
+  I := I and not (1 shl N);          // сброс бита<br>
+  I := I xor (1 shl N);              // инверсия бита<br>
+  if (i and (1 shl N)) <> 0 then...  // проверка установленного бита<br>
+end;<br>
+<br>
+Tbd....<br>
+</p>
+</body>
+</html>
