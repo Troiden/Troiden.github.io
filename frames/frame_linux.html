@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd>
+<html>
+ <head>
+   <title>!DOCTYPE</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ </head>
+<body>
+<h2>Linux commands</h2>
+<p>
+
+<h3>GREP usage:</h3>
+grep -r "text"<br>
+
+<h3>Build Uboot:</h3>
+make distclean<br>
+make zynq_zed_defconfig<br>
+make<br>
+
+<h3>Build Kernel:</h3>
+make distclean<br>
+make ARCH=arm xilinx_zynq_defconfig<br>
+make ARCH=arm UIMAGE_LOADADDR=0x8000 uImage<br>
+</p>
+</body>
+</html>
