@@ -9,5 +9,9 @@
 <p>
 set_property -dict {LOC D19 IOSTANDARD LVCMOS33 DRIVE 12} [get_ports get_ports DAC_Q[0]]<br>
 </p>
+<h2>Readback firmware from memory:</h2>
+<p>
+readback_hw_cfgmem -all -format bin -file C:/design1.bin [current_hw_cfgmem]<br>
+</p>
 </body>
 </html>
