@@ -34,6 +34,11 @@ set_false_path -from [get_cells -hierarchical -filter { NAME =~  "*ila_core_inst
 <br>
 set_false_path -from [get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/en_adv_trigger_reg*" && IS_SEQUENTIAL } ] -to [get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_regs/reg_892/I_EN_STAT_EQ1.U_STAT/xsdb_reg_reg*" && IS_SEQUENTIAL } ]
 <br>
+Workaround process:<br>
+For Instantiated design:<br>
+In case of instantiated design, above timing exceptions can be added directly to design/system level XDC file and take it through entire implementation.<br>
+For Inserted design:<br>
+Create a tcl file with the commands from above and hook it into the post-opt event under "Implementation settings".<br>
 </p>
 </body>
 </html>
