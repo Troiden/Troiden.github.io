@@ -40,5 +40,8 @@ In case of instantiated design, above timing exceptions can be added directly to
 For Inserted design:<br>
 Create a tcl file with the commands from above and hook it into the post-opt event under "Implementation settings".<br>
 </p>
+<p>
+set_property IS_MANAGED false [get_files <IP_NAME>.xci]
+</p>
 </body>
 </html>
