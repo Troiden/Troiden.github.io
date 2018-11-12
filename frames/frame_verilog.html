@@ -19,6 +19,8 @@ b_vect[ 0 +: 8] // == b_vect[0 : 7]<br>
 b_vect[15 -: 8] // == b_vect[8 :15]<br>
 <br>
 dword[8*sel +: 8] // variable part-select with fixed width<br>
+<br>
+out = {<<{inp}}; // right to left streaming in SystemVerilog<br>
 </p>
 </body>
 </html>
