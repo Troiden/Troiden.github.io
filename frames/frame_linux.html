@@ -23,6 +23,32 @@ make ARCH=arm UIMAGE_LOADADDR=0x8000 uImage<br>
 
 <h3>Cross-compile for build:</h3>
 export CROSS_COMPILE=arm-linux-gnueabihf-<br>
+
+<h3>Install tools:</h3>
+mkdir aarch64-toolchain<br>
+cd aarch64-toolchain/<br>
+wget http://releases.linaro.org/components/toolchain/binaries/6.5-2018.12/aarch64-linux-gnu/gcc-linaro-6.5.0-2018.12-x86_64_aarch64-linux-gnu.tar.xz<br>
+tar -Jxvf gcc-linaro-6.5.0-2018.12-x86_64_aarch64-linux-gnu.tar.xz<br>
+export PATH=/<your path>/aarch64-toolchain/gcc-linaro-6.5.0-2018.12-x86_64_aarch64-linux-gnu/bin:$PATH<br>
+aarch64-linux-gnu-gcc -v<br>
+<br>
+mkdir linaro<br>
+cd linaro/<br>
+mkdir arm-toolchain<br>
+cd arm-toolchain/<br>
+wget http://releases.linaro.org/components/toolchain/binaries/6.5-2018.12/arm-linux-gnueabi/gcc-linaro-6.5.0-2018.12-x86_64_arm-linux-gnueabi.tar.xz<br>
+tar -Jxvf gcc-linaro-6.5.0-2018.12-x86_64_arm-linux-gnueabi.tar.xz<br>
+export PATH=/arm-toolchain/gcc-linaro-6.5.0-2018.12-x86_64_arm-linux-gnueabi/bin:$PATH<br>
+arm-linux-gnueabi-gcc -v<br>
+
+<h3>Some variables:</h3>
+[u-boot-xlnx]$ export ARCH=arm64<br>
+[u-boot-xlnx]$ export CROSS_COMPILE=aarch64-linux-gnu-<br>
+[u-boot-xlnx]$ make xilinx_zynqmp_zcu102_rev1_0_defconfig<br>
+[u-boot-xlnx]$ make –j4<br>
+<br>
+make ARCH=arm zynq_zybo_config<br>
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- <br>
 </p>
 </body>
 </html>
