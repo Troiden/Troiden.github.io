@@ -5,6 +5,10 @@
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  </head>
 <body>
+<h2>SDK create bin from elf:</h2>
+<p>
+Add to Post-build steps this command: "mb-objcopy -O binary nand_testing.elf nand_testing.bin"
+</p>
 <h2>XDC multiple parameters:</h2>
 <p>
 set_property -dict {LOC D19 IOSTANDARD LVCMOS33 DRIVE 12} [get_ports get_ports DAC_Q[0]]<br>
