@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd>
+<html>
+ <head>
+   <title>!DOCTYPE</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ </head>
+<body>
+<h2>Get version info:</h2>
+<p>
+function GetAppVersion: String;<br>
+var<br>
+  Res: TResourceStream;<br>
+  VerInfo: record Minor, Major, Build, Release: Word end;<br>
+begin<br>
+ Res := TResourceStream.Create(HInstance, '#1', RT_VERSION);<br>
+ try<br>
+  Res.Seek(48, soBeginning);<br>
+  Res.Read(VerInfo, SizeOf(VerInfo));<br>
+  Result := Format('%d.%d.%d.%d', [VerInfo.Major, VerInfo.Minor, VerInfo.Release, VerInfo.Build]);<br>
+ finally<br>
+  Res.Free;<br>
+ end;<br>
+end;<br>
+<br>
+Tbd....<br>
+</p>
+</body>
+</html>
